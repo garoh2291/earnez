@@ -29,7 +29,7 @@ export default function Faq() {
           <div className="relative">
             <Image
               //   src="/images/phone/2.png"
-              src="/images/store.png"
+              src="/images/2.png"
               width={0}
               height={0}
               sizes="100vw"
@@ -41,7 +41,7 @@ export default function Faq() {
           {/* <div className="overflow-hidden absolute md:size-[500px] size-[400px] bg-gradient-to-tr to-red-500/20 via-red-500/70 from-red-500 bottom-1/2 translate-y-1/2 md:end-0 end-1/2 md:translate-x-0 translate-x-1/2 -z-1 shadow-md shadow-red-500/10 rounded-full"></div> */}
           <div className="overflow-hidden absolute md:size-[500px] size-[400px] bg-gradient-to-tl to-[#FF97FF]/20 via-[#9761FF]/70 from-[#9761FF] bottom-1/2 translate-y-1/2 md:start-0 start-1/2 ltr:md:translate-x-0 ltr:-translate-x-1/2 rtl:md:translate-x-0 rtl:translate-x-1/2 -z-1 shadow-md shadow-red-500/10 rounded-full"></div>
 
-          <div className="absolute bottom-28 md:start-0 -start-5 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-52 m-3">
+          <div className="absolute -bottom-20 md:start-0 -start-5 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-52 m-3">
             <div className="flex items-center">
               <div className="flex items-center justify-center size-[65px] bg-[#9761FF]/5 text-[#9761FF] text-center rounded-full me-3">
                 <FiDownload className="size-6" />

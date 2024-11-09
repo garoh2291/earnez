@@ -1,124 +1,147 @@
-import React from 'react'
-import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/image";
+import Link from "next/link";
 
-import Navbar from '../components/navbar'
+import Faq from "../components/faq";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
-import Faq from '../components/faq';
-import Client from '../components/client';
-import Footer from '../components/footer';
-import Contact from '../components/contact';
-import Partner from '../components/partner';
-import Download from '../components/download';
-import Switcher from '../components/switcher';
-import AboutTwo from '../components/about-two';
-import AboutOne from '../components/about-one';
-import Screenshot from '../components/screenshot';
-import FeaturesTwo from '../components/features-two';
-import ScrollToTop from '../components/scroll-to-top';
-import TypeEffectOne from '../components/type-effect-one';
+import Switcher from "../components/switcher";
+import Download from "../components/download";
+import AboutOne from "../components/about-one";
 
-import { FiArrowRight, FiMail } from 'react-icons/fi';
+import FeaturesOne from "../components/features-one";
+import ScrollToTop from "../components/scroll-to-top";
 
-export default function Page() {
+export default function Home() {
   return (
     <>
-    <Navbar navLight={false} playBtn={false} bgLight={false} navCenter={false}/>
+      <Navbar
+        navLight={false}
+        playBtn={false}
+        bgLight={false}
+        navCenter={false}
+      />
 
-    <section className="relative overflow-hidden pt-40 after:content-[''] after:absolute after:inset-0 after:mx-auto after:size-[56rem] after:bg-gradient-to-tl after:to-red-600/40  after:from-indigo-600/40 after:blur-[200px] after:rounded-full after:-z-1" id="home">
-        <div className="container relative z-2">
-            <div className="grid grid-cols-1 text-center">
-                <div className="">
-                    <TypeEffectOne/>
-                    <p className="text-slate-500 dark:text-white/60 text-lg max-w-xl mx-auto">Gain valuable insights into user behavior and drive data-informed decision-making with our revolutionary platform.</p>
-
-                    <div className="subcribe-form mt-6 mb-3">
-                        <form className="relative max-w-lg mx-auto">
-                            <FiMail className="size-4 absolute top-[17px] start-5 text-slate-400"/>
-                            <input type="email" id="subcribe" name="email" className="form-input border-0 py-4 ps-12 pe-12 w-full h-[50px] outline-none text-black dark:text-white rounded-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 focus:border-0 focus:ring-0" placeholder="Your Email Address :"/>
-                            <button type="submit" className="size-[46px] inline-flex items-center justify-center rounded-full align-middle absolute top-[2px] end-[3px] bg-red-500 border-red-500 text-white"><FiArrowRight className="size-5"/></button>
-                        </form>
-                    </div>
-
-                    <span className="text-slate-500 dark:text-white/60 font-medium">Looking for help? <Link href="" className="text-red-500">Get in touch with us</Link></span>
-                </div>
-                <div className="relative mt-4 lg:mx-16 z-3">
-                    <Image src='/images/phone/3-phone-half.png' width={0} height={0} sizes='100vw' style={{width:'100%', height:'auto'}} alt="" className="mover"/>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section className="relative md:py-24 py-16" id="features">
+      <section
+        className="relative overflow-hidden md:py-36 py-24 bg-slate-50/50 dark:bg-slate-800/20 bg-no-repeat bg-center bg-cover"
+        id="home"
+        style={{ backgroundImage: `url('/images/bg1.png')` }}
+      >
         <div className="container relative">
-            <div className="grid grid-cols-1 pb-6 text-center">
-                <h6 className="text-red-500 uppercase text-sm font-bold tracking-wider mb-3">Features</h6>
-                <h4 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-bold">Discover Powerful Features</h4>
+          <div className="grid md:grid-cols-2 grid-cols-1 items-center mt-6 gap-[30px] relative">
+            <div className="md:me-6">
+              <h4 className="font-bold lg:leading-normal leading-normal text-[38px] lg:text-[42px] mb-5">
+                Earn Money Passively with Your Phone
+              </h4>
+              <p className="text-slate-400 text-lg max-w-xl">
+                Turn your Android device into a passive income stream by helping
+                mobile operators test their SMS services. No effort required -
+                earn up to €0.03 per message automatically.
+              </p>
 
-                <p className="text-slate-400 max-w-xl mx-auto">Unleash the power of our platform with a multitude of powerful features, empowering you to achieve your goals.</p>
+              <div className="mt-6">
+                <Link href="#">
+                  <button className="bg-[#9761FF] text-white py-2 rounded-md  w-[152px] ">
+                    Download
+                  </button>
+                </Link>
+              </div>
             </div>
 
-            <FeaturesTwo/>
-        </div>
+            <div className="relative">
+              <Image
+                src="/images/s24.png"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: "100%", height: "auto" }}
+                className="mx-auto w-80 rotate-12 relative z-2"
+                alt=""
+              />
+              <div className="overflow-hidden absolute md:size-[500px] size-[400px] bg-gradient-to-tl to-[#FF97FF]/20 via-[#9761FF]/70 from-[#9761FF] bottom-1/2 translate-y-1/2 md:start-0 start-1/2 ltr:md:translate-x-0 ltr:-translate-x-1/2 rtl:md:translate-x-0 rtl:translate-x-1/2 z-1 shadow-md shadow-red-500/10 rounded-full"></div>
 
-        <div className="container relative md:mt-24 mt-16">
-            <AboutOne/>
-        </div>
-
-        <div className="container relative md:mt-24 mt-16">
-            <AboutTwo/>
-        </div>
-    </section>
-
-    <section className="relative md:py-24 py-16 bg-slate-50/50 dark:bg-slate-800/20" id="screenshot">
-        <div className="container relative">
-            <div className="grid grid-cols-1 pb-6 text-center">
-                <h6 className="text-red-500 uppercase text-sm font-bold tracking-wider mb-3">Screenshots</h6>
-                <h4 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-bold">Simple & Beautiful Interface</h4>
-
-                <p className="text-slate-400 max-w-xl mx-auto">Unleash the power of our platform with a multitude of powerful features, empowering you to achieve your goals.</p>
+              <div className="overflow-hidden after:content-[''] after:absolute after:size-16 after:bg-[#FF97FF]/20 after:top-0 after:end-6 after:z-1 after:rounded-lg after:animate-[spin_10s_linear_infinite]"></div>
             </div>
-
-            <Screenshot/>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section className="relative overflow-hidden md:py-24 py-16" id="faqs">
-        <Faq/>
-    </section>
-
-    <section className="relative md:py-24 py-16 bg-slate-50/50 dark:bg-slate-800/20" id="download">
-        <Download/>
-    </section>
-
-    <section className="relative md:py-24 py-16" id="reviews">
+      <section className="relative md:py-24 py-16" id="features">
         <div className="container relative">
-            <div className="grid grid-cols-1 pb-6 text-center">
-                <h6 className="text-red-500 uppercase text-sm font-bold tracking-wider mb-3">Reviews</h6>
-                <h4 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-bold">10k+ Customers Trust Us</h4>
+          <div className="grid grid-cols-1 pb-6 text-center">
+            <h6 className="text-[#9761FF] uppercase text-sm font-bold tracking-wider mb-3">
+              Our Features
+            </h6>
+            <h4 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-bold">
+              Start Earning Effortlessly Today
+            </h4>
 
-                <p className="text-slate-400 max-w-xl mx-auto">Unleash the power of our platform with a multitude of powerful features, empowering you to achieve your goals.</p>
-            </div>
-            <Client/>
+            <p className="text-slate-400 max-w-xl mx-auto">
+              Simple, secure, and completely free - discover how EarnEZ turns
+              your phone into an automatic income generator.
+            </p>
+          </div>
+
+          <FeaturesOne />
         </div>
-    </section>
+      </section>
 
-    <section className="relative md:py-24 py-16 bg-slate-50/50 dark:bg-slate-800/20" id="contact">
-        <Contact/>
-    </section>
+      <section
+        className="relative md:py-24 py-16 bg-slate-50/50 dark:bg-slate-800/20"
+        id="features"
+      >
+        <div className="container relative  ">
+          <AboutOne />
+        </div>
+      </section>
 
-    <section className="py-6 border-t border-b border-gray-100 dark:border-gray-800">
+      <section className="relative overflow-hidden md:py-24 py-16" id="faqs">
+        <Faq />
+      </section>
+
+      <section
+        className="relative md:py-24 py-16 bg-slate-50/50 dark:bg-slate-800/20"
+        id="download"
+      >
+        <Download />
+      </section>
+
+      {/* <section className="relative md:py-24 py-16" id="reviews">
         <div className="container relative">
-            <Partner/>
+          <div className="grid grid-cols-1 pb-6 text-center">
+            <h6 className="text-red-500 uppercase text-sm font-bold tracking-wider mb-3">
+              Reviews
+            </h6>
+            <h4 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-bold">
+              10k+ Customers Trust Us
+            </h4>
+
+            <p className="text-slate-400 max-w-xl mx-auto">
+              Unleash the power of our platform with a multitude of powerful
+              features, empowering you to achieve your goals.
+            </p>
+          </div>
+          <Client />
         </div>
-    </section>
+      </section> */}
+      {/* 
+      <section
+        className="relative md:py-24 py-16 bg-slate-50/50 dark:bg-slate-800/20"
+        id="contact"
+      >
+        <Contact />
+      </section>
 
-    <Footer/>
+      <section className="py-6 border-t border-b border-gray-100 dark:border-gray-800">
+        <div className="container relative">
+          <Partner />
+        </div>
+      </section> */}
 
-    <ScrollToTop/>
+      <Footer />
 
-    <Switcher/>
-    
+      <ScrollToTop />
+      <Switcher />
     </>
-  )
+  );
 }

@@ -29,7 +29,7 @@ export default function AboutOne() {
       <div className="lg:col-span-5 md:col-span-6">
         <div className="pt-6 px-6 rounded-2xl bg-[#FF97FF]/5 dark:bg-[#FF97FF]/10 shadow shadow-[#FF97FF]/20">
           <Image
-            src="/images/img-crop.png"
+            src="/images/1.png"
             width={0}
             height={0}
             sizes="100vw"
